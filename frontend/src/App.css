@@ -1,0 +1,162 @@
+/* --- Core Layout & Background --- */
+.App { 
+  min-height: 100vh; 
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff); 
+  padding: 20px; 
+  font-family: sans-serif;
+  color: #1e293b; [cite_start]/* Global dark slate text for readability [cite: 172] */
+}
+
+.clinical-header { 
+  text-align: center; 
+  margin-bottom: 30px;
+  color: #0c4a6e;
+}
+
+/* --- Action Buttons --- */
+.action-row { 
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+  margin-top: 15px; 
+}
+
+.btn { 
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  border: none; 
+  cursor: pointer; 
+  font-weight: bold; 
+}
+
+.btn-primary { 
+  background: #0284c7; 
+  color: white; 
+}
+
+.btn-secondary { 
+  background: #64748b; 
+  color: white; 
+}
+
+.btn-accent { 
+  background: #ef4444; 
+  color: white; 
+}
+
+/* --- Clinical Grid Layout --- */
+.comparison-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 0.7fr; 
+  gap: 20px; 
+  max-width: 1400px; 
+  margin: 0 auto; 
+}
+
+.clinical-card { 
+  background: white; 
+  padding: 20px; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+
+/* --- UPDATED: Light Aqua Lightbox (X-Ray Frames) --- */
+.lightbox-frame { 
+  background: #f0fdff; [cite_start]/* Light Aqua Background [cite: 172] */
+  height: 350px; 
+  border-radius: 10px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  overflow: hidden; 
+  border: 3px solid #bae6fd; [cite_start]/* Soft Blue Border [cite: 178] */
+  color: #64748b; /* Gray text for "Analysis pending" labels */
+}
+
+.lightbox-frame img { 
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+}
+
+/* --- Intelligence Dashboard Sidebar --- */
+.dashboard { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+  border-left: 5px solid #0284c7; 
+  padding-left: 15px;
+}
+
+.status-item { 
+  font-size: 0.9rem; 
+  font-weight: 600; 
+  color: #475569;
+}
+
+.blue-txt { 
+  color: #0284c7; 
+}
+
+/* --- UPDATED: Light Aqua Notes Area --- */
+.notes-area textarea { 
+  width: 95%; 
+  height: 120px; 
+  border: 1px solid #bae6fd; 
+  border-radius: 5px; 
+  padding: 10px; 
+  resize: none; 
+  background-color: #f0fdff; [cite_start]/* Light Aqua Textarea  */
+  color: #1e293b; /* Dark text for visibility */
+}
+
+.fdi-ref { 
+  font-size: 0.7rem; 
+  color: #94a3b8; 
+  margin-top: auto; 
+}
+
+/* --- UPDATED: Clinical Data Table --- */
+.clinical-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: 10px; 
+  color: #1e293b !important; [cite_start]/* Force high-contrast text [cite: 172] */
+}
+
+.clinical-table th { 
+  text-align: left; 
+  background: #e0faff; [cite_start]/* Aqua-tinted headers  */
+  padding: 12px; 
+  color: #0369a1;
+  font-size: 0.85rem;
+}
+
+.clinical-table td { 
+  padding: 10px; 
+  border-bottom: 1px solid #f1f5f9; 
+  color: #334155 !important;
+  font-weight: 500;
+}
+
+/* --- Modal & Registration --- */
+.modal-overlay { 
+  position: fixed; 
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background: rgba(15, 23, 42, 0.7); /* Softer dark overlay */
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 100; 
+}
+
+.modal-content { 
+  background: white; 
+  padding: 30px; 
+  border-radius: 15px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  width: 320px; 
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
